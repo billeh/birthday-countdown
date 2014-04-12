@@ -4,8 +4,9 @@ d = Date.today
 
 get '/' do
 	if d.month == 8 && d.day == 10
-		'YES'
+		output = 'YES'
 	else
-		'No. :('
+		output = 'No. :('
 	end
+	erb :index, :locals => {:output => output}
 end
